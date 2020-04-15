@@ -1,0 +1,24 @@
+plugins {
+    id 'java-gradle-plugin'
+    id 'maven-publish'
+}
+
+gradlePlugin {
+    plugins {
+        projectInfo {
+            id = 'com.example.published-example-plugin'
+            implementationClass = 'com.example.PublishedExamplePlugin'
+        }
+    }
+}
+
+group 'com.example'
+version '42.0'
+
+publishing {
+    repositories {
+        maven {
+            url '../maven-repo'
+        }
+    }
+}

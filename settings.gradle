@@ -1,0 +1,17 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        maven {
+            url 'maven-repo'
+        }
+    }
+}
+buildscript {
+    dependencies {
+        classpath(files('jarred-plugin.jar'))
+    }
+}
+
+rootProject.name = 'plugins-in-scans'
+includeBuild('plugin')
+

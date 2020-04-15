@@ -1,0 +1,5 @@
+build
+.gradle
+maven-repo
+*.jar
+
